@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruits_app/core/constant/constant.dart';
+import 'package:fruits_app/core/helpers/extensions.dart';
+import 'package:fruits_app/core/services/shared_preferences_singleton.dart';
 
 import '../../../../../core/routing/routes.dart';
 import '../../../../../generated/assets.dart';
@@ -36,7 +39,12 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
   void executeNavigation() {
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, Routes.onBoardingScreen);
+      checkIfUserIsLoggedIn() ? context.pushReplacementNamed(Routes.loginScreen) : context.pushReplacementNamed(Routes.onBoardingScreen);
     });
+  }
+
+  bool checkIfUserIsLoggedIn() {
+    bool isOnBoardingViewSeen = Prefs.getBool(kIsOnBoardingViewSeen);
+    return isOnBoardingViewSeen;
   }
 }

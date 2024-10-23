@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/core/theming/text_styles.dart';
 import 'package:fruits_app/features/on_boarding/presentaion/views/widgets/page_view_item.dart';
 import 'package:fruits_app/generated/assets.dart';
 
+import '../../../../../core/theming/app_colors.dart';
 import '../../../../../generated/l10n.dart';
 
 class OnBoardingPageView extends StatelessWidget {
@@ -12,7 +14,7 @@ class OnBoardingPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return PageView(
       controller: pageController,
-      reverse: true,
+      // reverse: true,
       children: [
         PageViewItem(
             isVisible: true,
@@ -22,9 +24,9 @@ class OnBoardingPageView extends StatelessWidget {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(S.of(context).onboarding_intro_title_one),
-                Text("Fruit", style: TextStyle(color: Colors.green),),
-                Text("HUB", style: TextStyle(color: Colors.orangeAccent),)
+                Text(S.of(context).onboarding_intro_title_one, style: TextStyles.font23Bold,),
+                Text(" HUB", style: TextStyles.font23Bold.copyWith(color: AppColors.secondaryColor),),
+                Text("Fruit", style: TextStyles.font23Bold.copyWith(color: AppColors.primaryColor),),
               ],
             )),
         PageViewItem(
