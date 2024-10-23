@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_app/core/routing/app_router.dart';
-
 import 'core/routing/routes.dart';
-import 'features/splash/presentation/view/splash_view.dart';
-
+import 'generated/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 class FruitHub extends StatelessWidget {
   final AppRouter appRouter;
   const FruitHub({super.key, required this.appRouter});
@@ -14,6 +13,14 @@ class FruitHub extends StatelessWidget {
     return ScreenUtilInit(
       designSize: Size(375, 812),
       child: MaterialApp(
+        localizationsDelegates: [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+        locale: Locale("ar"),
         debugShowCheckedModeBanner: false,
         title: 'Fruits Hub',
         onGenerateRoute: appRouter.generateRoute,

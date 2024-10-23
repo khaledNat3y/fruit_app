@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../core/routing/routes.dart';
 import '../../../../../generated/assets.dart';
 
-class SplashViewBody extends StatelessWidget {
+class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
 
+  @override
+  State<SplashViewBody> createState() => _SplashViewBodyState();
+}
+
+class _SplashViewBodyState extends State<SplashViewBody> {
+  @override
+  void initState() {
+    executeNavigation();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -13,7 +24,7 @@ class SplashViewBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             SvgPicture.asset(Assets.imagesPlant),
           ],
@@ -22,5 +33,10 @@ class SplashViewBody extends StatelessWidget {
         SvgPicture.asset(Assets.imagesSplashButton, fit: BoxFit.fill,),
       ],
     );
+  }
+  void executeNavigation() {
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, Routes.onBoardingScreen);
+    });
   }
 }
