@@ -2,12 +2,15 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_app/core/constant/constant.dart';
+import 'package:fruits_app/core/helpers/extensions.dart';
+import 'package:fruits_app/core/routing/routes.dart';
+import 'package:fruits_app/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_app/core/theming/app_colors.dart';
 import 'package:fruits_app/core/widgets/custom_button.dart';
 import 'package:fruits_app/features/on_boarding/presentaion/views/widgets/on_boarding_page_view.dart';
 
 import '../../../../../core/helpers/spacing.dart';
-import '../../../../../core/theming/app_theme.dart';
+import '../../../../../core/theming/text_styles.dart';
 import '../../../../../generated/l10n.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -48,7 +51,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         )),
         DotsIndicator(
           dotsCount: 2,
-          position: 1,
+          position: 0,
           decorator: DotsDecorator(
             activeColor: AppColors.primaryColor,
             color: currentPage == 1
@@ -73,7 +76,10 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                   textStyle: TextStyles.font18WhiteMedium,
                   backgroundColor: AppColors.primaryColor,
                   verticalPadding: 0.0,
-                  onPressed: () {}),
+                  onPressed: () {
+                    Prefs.setBool(kIsOnBoardingViewSeen, true);
+                    context.pushReplacementNamed(Routes.loginScreen);
+                  }),
             ),
           ),
         ),
