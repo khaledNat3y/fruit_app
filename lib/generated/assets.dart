@@ -8,6 +8,10 @@ class Assets {
   static const String fontsCairoRegular = 'assets/fonts/Cairo-Regular.ttf';
   static const String fontsCairoSemiBold = 'assets/fonts/Cairo-SemiBold.ttf';
   static const String imagesAppIcon = 'assets/images/app_icon.png';
+  static const String imagesAppleIcon = 'assets/images/apple_icon.svg';
+  static const String imagesEye = 'assets/images/eye.png';
+  static const String imagesFacebookIcon = 'assets/images/facebook_icon.svg';
+  static const String imagesGoogleIcon = 'assets/images/google_icon.svg';
   static const String imagesLogo = 'assets/images/logo.svg';
   static const String imagesPageViewItem1BackgroundImage = 'assets/images/page_view_item1_background_image.svg';
   static const String imagesPageViewItem1Image = 'assets/images/page_view_item1_image.svg';

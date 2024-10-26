@@ -24,9 +24,9 @@ class OnBoardingPageView extends StatelessWidget {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(S.of(context).onboarding_intro_title_one, style: TextStyles.font23Bold,),
-                Text(" HUB", style: TextStyles.font23Bold.copyWith(color: AppColors.secondaryColor),),
-                Text("Fruit", style: TextStyles.font23Bold.copyWith(color: AppColors.primaryColor),),
+                Text(S.of(context).onboarding_intro_title_one, style: AppStyles.font23Bold,),
+                Text(" HUB", style: AppStyles.font23Bold.copyWith(color: AppColors.secondaryColor),),
+                Text("Fruit", style: AppStyles.font23Bold.copyWith(color: AppColors.primaryColor),),
               ],
             )),
         PageViewItem(

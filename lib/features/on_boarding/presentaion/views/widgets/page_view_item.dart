@@ -42,7 +42,7 @@ class PageViewItem extends StatelessWidget {
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Text(S.of(context).skip, style: TextStyles.font13Regular.copyWith(
+                    child: Text(S.of(context).skip, style: AppStyles.font13Regular.copyWith(
                       color: AppColors.lightGrey
                     ),),
                   ),
@@ -54,7 +54,7 @@ class PageViewItem extends StatelessWidget {
         verticalSpace(64),
         title,
         verticalSpace(16),
-        Text(subtitle,style: TextStyles.font13SemiBold.copyWith(
+        Text(subtitle,style: AppStyles.font13SemiBold.copyWith(
           color: AppColors.designGrey
         ), textAlign: TextAlign.center,),
       ],
