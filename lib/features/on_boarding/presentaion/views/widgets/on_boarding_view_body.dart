@@ -73,7 +73,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               height: 54.h,
               child: CustomButton(
                   buttonText: S.of(context).start_now,
-                  textStyle: TextStyles.font18WhiteMedium,
+                  textStyle: AppStyles.font18WhiteMedium,
                   backgroundColor: AppColors.primaryColor,
                   verticalPadding: 0.0,
                   onPressed: () {

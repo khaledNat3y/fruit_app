@@ -11,4 +11,5 @@ abstract class AppColors {
   static const Color lightGrey = Color(0xFF949D9E);
   static const Color designGrey = Color(0xff4E5556);
   static const Color lighterGrey = Color(0xFFC4C4C4);
+  static const Color textFieldBackground = Color(0xFFF9FAFA);
 }
