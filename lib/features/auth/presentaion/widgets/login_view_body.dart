@@ -9,11 +9,18 @@ import '../../../../generated/assets.dart';
 import '../../../../generated/l10n.dart';
 import 'custom_third_party_login_widget.dart';
 import 'dont_have_account.dart';
+import 'forgot_password.dart';
 import 'or_login_with.dart';
 
-class LoginViewBody extends StatelessWidget {
+class LoginViewBody extends StatefulWidget {
   const LoginViewBody({super.key});
 
+  @override
+  State<LoginViewBody> createState() => _LoginViewBodyState();
+}
+
+class _LoginViewBodyState extends State<LoginViewBody> {
+  bool isObscureText = true;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -24,31 +31,34 @@ class LoginViewBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             verticalSpace(33),
-
             /// Login field
             CustomTextFormField(
                 hintText: S.of(context).email,
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {}),
             verticalSpace(16),
-
             /// Password field
             CustomTextFormField(
                 hintText: S.of(context).password,
                 isObscureText: true,
                 keyboardType: TextInputType.visiblePassword,
-                suffixIcon: Icon(
-                  Icons.visibility,
-                  color: AppColors.lighterGrey,
-                  size: 25,
+                suffixIcon: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isObscureText = !isObscureText;
+                    });
+                  },
+                  child: Icon(
+                    isObscureText
+                        ? Icons.visibility
+                        : Icons.visibility_off,
+                    color: AppColors.lighterGrey,
+                    size: 25,
+                  ),
                 ),
                 validator: (value) {}),
             verticalSpace(16),
-            Text(
-              S.of(context).forgot,
-              style: AppStyles.font13SemiBold.copyWith(
-                  color: AppColors.lightPrimaryColor, fontFamily: 'Cairo'),
-            ),
+            ForgotPassword(),
             verticalSpace(33),
             CustomButton(
                 buttonText: S.of(context).login,

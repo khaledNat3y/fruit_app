@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:fruits_app/core/helpers/extensions.dart';
+import 'package:fruits_app/core/routing/routes.dart';
 
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/text_styles.dart';
@@ -20,10 +22,12 @@ class DontHaveAnAccount extends StatelessWidget {
                 .copyWith(color: AppColors.lightGrey, fontFamily: 'Cairo'),
             children: [
               TextSpan(
-                recognizer: TapGestureRecognizer()..onTap = () {},
+                recognizer: TapGestureRecognizer()..onTap = () {
+                  context.pushNamed(Routes.signupScreen);
+                },
                 text: S.of(context).make_account,
                 style: AppStyles.font16SemiBold
-                    .copyWith(color: AppColors.lightPrimaryColor, fontFamily: 'Cairo'),
+                    .copyWith(color: AppColors.primaryColor, fontFamily: 'Cairo'),
               ),
             ],
           ),

@@ -16,10 +16,14 @@ class CustomThirdPartyLoginWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: onTap,
+      splashColor: AppColors.primaryColor.withOpacity(0.2),
+      highlightColor: AppColors.primaryColor.withOpacity(0.1),
+      borderRadius: BorderRadius.circular(16.0),
       child: Container(
         height: 56.h,
+        width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16.0),
           border: Border.all(
