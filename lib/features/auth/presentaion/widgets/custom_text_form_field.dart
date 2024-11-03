@@ -18,6 +18,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final TextInputType? keyboardType;
   final Function(String?) validator;
+  final void Function(String?)? onSaved;
 
   const CustomTextFormField(
       {super.key,
@@ -31,12 +32,14 @@ class CustomTextFormField extends StatelessWidget {
         this.suffixIcon,
         this.backgroundColor,
         this.controller,
-        required this.validator, this.keyboardType});
+        required this.validator, this.keyboardType, this.onSaved});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      cursorErrorColor: AppColors.red,
+      onSaved: onSaved,
       cursorColor: AppColors.lighterGrey,
       keyboardType: keyboardType,
       decoration: InputDecoration(
@@ -71,8 +74,8 @@ class CustomTextFormField extends StatelessWidget {
 
   OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
-        borderSide: BorderSide(color: Color(0xffe6e9e9), width: 1.3),
-        borderRadius: BorderRadius.circular(4.0),
-      );
+      borderSide: BorderSide(color: Color(0xffe6e9e9), width: 1.3),
+      borderRadius: BorderRadius.circular(4.0),
+    );
   }
 }
