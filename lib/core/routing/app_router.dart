@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/routing/routes.dart';
-import 'package:fruits_app/features/auth/presentaion/login_view.dart';
-import 'package:fruits_app/features/auth/presentaion/signup.dart';
+import 'package:fruits_app/features/auth/presentaion/signin_view.dart';
+import 'package:fruits_app/features/auth/presentaion/signup_view.dart';
 import 'package:fruits_app/features/on_boarding/presentaion/views/on_boarding_view.dart';
 import 'package:fruits_app/features/splash/presentation/view/splash_view.dart';
 
@@ -22,7 +22,7 @@ class AppRouter {
         );
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (context) => const LoginView(),
+          builder: (context) => const SignInView(),
         );
       case Routes.signupScreen:
         return MaterialPageRoute(
