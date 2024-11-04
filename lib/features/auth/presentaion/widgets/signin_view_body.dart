@@ -110,6 +110,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
               /// will be changed to Platform.isIOS in the future
               Platform.isAndroid ?
               CustomThirdPartyLoginWidget(
+
                 title: S.of(context).login_with_apple,
                 image: Assets.imagesAppleIcon,
                 onTap: (){
