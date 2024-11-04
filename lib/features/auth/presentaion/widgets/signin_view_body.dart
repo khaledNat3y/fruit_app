@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_app/core/helpers/app_regex.dart';
@@ -105,13 +107,15 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                 },
               ),
               verticalSpace(16),
+              /// will be changed to Platform.isIOS in the future
+              Platform.isAndroid ?
               CustomThirdPartyLoginWidget(
                 title: S.of(context).login_with_apple,
                 image: Assets.imagesAppleIcon,
                 onTap: (){
                   context.read<SignInCubit>().signInWithApple();
                 },
-              ),
+              ) : Container(),
               verticalSpace(16),
               CustomThirdPartyLoginWidget(
                 title: S.of(context).login_with_facebook,
