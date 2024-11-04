@@ -490,20 +490,20 @@ class S {
     );
   }
 
-  /// `The password provided is too weak.`
+  /// `The password provided is too weak`
   String get the_password_provided_is_too_weak {
     return Intl.message(
-      'The password provided is too weak.',
+      'The password provided is too weak',
       name: 'the_password_provided_is_too_weak',
       desc: '',
       args: [],
     );
   }
 
-  /// `The account already exists for that email.`
+  /// `The account already exists for that email`
   String get account_already_in_use {
     return Intl.message(
-      'The account already exists for that email.',
+      'The account already exists for that email',
       name: 'account_already_in_use',
       desc: '',
       args: [],
@@ -555,6 +555,16 @@ class S {
     return Intl.message(
       'Wrong Password or Email provided for that user',
       name: 'wrong_password_or_email_provided_for_that_user',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password provided is too weak`
+  String get weak_password {
+    return Intl.message(
+      'The password provided is too weak',
+      name: 'weak_password',
       desc: '',
       args: [],
     );

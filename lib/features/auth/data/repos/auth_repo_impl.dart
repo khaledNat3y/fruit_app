@@ -39,6 +39,39 @@ class AuthRepoImpl extends AuthRepo {
       return Left(ServerFailure(message: e.toString()));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithGoogle() async{
+    try {
+      var user = await firebaseAuthService.signInWithGoogle();
+      return Right(UserModel.fromFirebaseUser(user));
+    }catch(e) {
+      log("Exception in AuthRepoImpl.signInWithGoogle: ${e.toString()}");
+      return Left(ServerFailure(message: e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithFacebook() async{
+    try {
+      var user = await firebaseAuthService.signInWithFacebook();
+      return Right(UserModel.fromFirebaseUser(user));
+    }catch(e) {
+      log("Exception in AuthRepoImpl.signInWithFacebook: ${e.toString()}");
+      return Left(ServerFailure(message: e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithApple() async{
+    try {
+      var user = await firebaseAuthService.signInWithApple();
+      return Right(UserModel.fromFirebaseUser(user));
+    }catch(e) {
+      log("Exception in AuthRepoImpl.signInWithApple: ${e.toString()}");
+      return Left(ServerFailure(message: e.toString()));
+    }
+  }
   
   
 }
