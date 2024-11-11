@@ -6,6 +6,7 @@ import 'package:fruits_app/features/auth/presentaion/widgets/custom_progress_hud
 import 'package:fruits_app/features/auth/presentaion/widgets/signup_view_body.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
+import '../../../../generated/l10n.dart';
 import '../cubits/signup_cubit/signup_cubit.dart';
 
 class SignupViewBodyBlocConsumer extends StatelessWidget {
@@ -17,6 +18,7 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         if (state is SignupSuccess) {
           context.pop();
+          SnackBarHelper.showSuccessSnackBar(context, S.of(context).register_success);
         }
         if (state is SignupFailure) {
           SnackBarHelper.showErrorSnackbar(context, state.message);

@@ -4,6 +4,7 @@ import 'package:fruits_app/core/helpers/extensions.dart';
 import 'package:fruits_app/core/routing/routes.dart';
 import 'package:fruits_app/features/auth/presentaion/widgets/signin_view_body.dart';
 import '../../../../core/helpers/snack_bar_helper.dart';
+import '../../../../generated/l10n.dart';
 import '../cubits/signin_cubit/signin_cubit.dart';
 import 'custom_progress_hud.dart';
 
@@ -16,6 +17,7 @@ class SignInViewBodyBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         if (state is SignInSuccess) {
           // context.pushReplacementNamed(Routes.homeScreen);
+          SnackBarHelper.showSuccessSnackBar(context, S.of(context).login_success);
           print("Success Login");
         }
         if (state is SignInFailure) {

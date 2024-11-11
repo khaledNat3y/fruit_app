@@ -11,6 +11,9 @@ import 'get_it_service.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 class FirebaseAuthService {
+  Future deleteUser() async {
+    await getIt<FirebaseAuth>().currentUser!.delete();
+  }
   Future<User> createUserWithEmailAndPassword({required String email, required String password}) async {
     try {
       final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -113,10 +116,6 @@ class FirebaseAuthService {
   }
 
   Future<User> signInWithApple() async {
-    // To prevent replay attacks with the credential returned from Apple, we
-    // include a nonce in the credential request. When signing in with
-    // Firebase, the nonce in the id token returned by Apple, is expected to
-    // match the sha256 hash of `rawNonce`.
     final rawNonce = generateNonce();
     final nonce = sha256ofString(rawNonce);
 

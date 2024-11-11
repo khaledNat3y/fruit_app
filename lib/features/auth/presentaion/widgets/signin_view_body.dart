@@ -107,17 +107,18 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                 },
               ),
               verticalSpace(16),
-              /// will be changed to Platform.isIOS in the future
-              Platform.isAndroid ?
-              CustomThirdPartyLoginWidget(
-
-                title: S.of(context).login_with_apple,
-                image: Assets.imagesAppleIcon,
-                onTap: (){
-                  context.read<SignInCubit>().signInWithApple();
-                },
-              ) : Container(),
-              verticalSpace(16),
+              Platform.isIOS ? Column(
+                children: [
+                  CustomThirdPartyLoginWidget(
+                    title: S.of(context).login_with_apple,
+                    image: Assets.imagesAppleIcon,
+                    onTap: (){
+                      context.read<SignInCubit>().signInWithApple();
+                    },
+                  ),
+                  verticalSpace(16),
+                ],
+              ) : SizedBox(),
               CustomThirdPartyLoginWidget(
                 title: S.of(context).login_with_facebook,
                 image: Assets.imagesFacebookIcon,
