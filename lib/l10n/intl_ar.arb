@@ -49,5 +49,6 @@
   "please_accept_the_terms_and_conditions": "يرجى قبول الشروط والأحكام",
   "please_check_your_internet_connection_and_try_again" : "يرجى التأكد من اتصالك بالانترنت ومن ثم حاول مرة اخرى",
   "user_not_found_for_that_email" : "لا يوجد مستخدم بهذا البريد الالكتروني",
-  "wrong_password_or_email_provided_for_that_user" : "كلمة المرور او البريد الالكتروني غير صحيحة لهذا المستخدم"
+  "wrong_password_or_email_provided_for_that_user" : "كلمة المرور او البريد الالكتروني غير صحيحة لهذا المستخدم",
+  "weak_password" : "كلمة المرور ضعيفة جدا"
 }

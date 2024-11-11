@@ -11,6 +11,7 @@ class Assets {
   static const String imagesAppleIcon = 'assets/images/apple_icon.svg';
   static const String imagesEye = 'assets/images/eye.png';
   static const String imagesFacebookIcon = 'assets/images/facebook_icon.svg';
+  static const String imagesGithubIcon = 'assets/images/github_icon.svg';
   static const String imagesGoogleIcon = 'assets/images/google_icon.svg';
   static const String imagesLogo = 'assets/images/logo.svg';
   static const String imagesPageViewItem1BackgroundImage = 'assets/images/page_view_item1_background_image.svg';

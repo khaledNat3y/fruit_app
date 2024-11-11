@@ -106,6 +106,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "user_not_found_for_that_email": MessageLookupByLibrary.simpleMessage(
             "لا يوجد مستخدم بهذا البريد الالكتروني"),
         "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
+        "weak_password":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة جدا"),
         "wrong_password_or_email_provided_for_that_user":
             MessageLookupByLibrary.simpleMessage(
                 "كلمة المرور او البريد الالكتروني غير صحيحة لهذا المستخدم"),
