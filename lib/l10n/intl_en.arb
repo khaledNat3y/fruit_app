@@ -43,11 +43,16 @@
   "please_enter_a_valid_password" : "Please enter a valid password",
   "please_enter_a_valid_full_name" : "Please enter a valid full name",
   "please_enter_a_valid_confirm_password" : "Please enter a valid confirm password",
-  "the_password_provided_is_too_weak" : "The password provided is too weak.",
-  "account_already_in_use" : "The account already exists for that email.",
+  "the_password_provided_is_too_weak" : "The password provided is too weak",
+  "account_already_in_use" : "The account already exists for that email",
   "an_error_occurred_while_creating_the_user" : "An error occurred while creating the user.",
   "please_accept_the_terms_and_conditions" : "Please accept the Terms and Conditions.",
   "please_check_your_internet_connection_and_try_again" : "Please check your internet connection and try again.",
   "user_not_found_for_that_email" : "No user found for that email",
-  "wrong_password_or_email_provided_for_that_user" : "Wrong Password or Email provided for that user"
+  "wrong_password_or_email_provided_for_that_user" : "Wrong Password or Email provided for that user",
+  "weak_password" : "The password provided is too weak",
+  "welcome_message" : "Good Morning",
+  "search_for" : "Search for......."
+
 }
+

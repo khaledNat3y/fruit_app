@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_app/core/theming/text_styles.dart';
 
-import '../../../../core/theming/app_colors.dart';
+import '../theming/app_colors.dart';
+import '../utils/fancations/build_out_line_input_border.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
@@ -14,6 +14,7 @@ class CustomTextFormField extends StatelessWidget {
   final String hintText;
   final bool? isObscureText;
   final Widget? suffixIcon;
+  final Widget? icon;
   final Color? backgroundColor;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
@@ -32,7 +33,7 @@ class CustomTextFormField extends StatelessWidget {
         this.suffixIcon,
         this.backgroundColor,
         this.controller,
-        required this.validator, this.keyboardType, this.onSaved});
+        required this.validator, this.keyboardType, this.onSaved, this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +64,7 @@ class CustomTextFormField extends StatelessWidget {
         hintText: hintText,
         hintStyle: hintStyle ?? AppStyles.font13Regular.copyWith(color: AppColors.lightGrey),
         suffixIcon: suffixIcon,
+        icon: icon,
       ),
       obscureText: isObscureText ?? false,
       style: AppStyles.font14Medium,
@@ -72,10 +74,5 @@ class CustomTextFormField extends StatelessWidget {
     );
   }
 
-  OutlineInputBorder buildOutlineInputBorder() {
-    return OutlineInputBorder(
-      borderSide: BorderSide(color: Color(0xffe6e9e9), width: 1.3),
-      borderRadius: BorderRadius.circular(4.0),
-    );
-  }
+
 }

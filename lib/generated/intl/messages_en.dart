@@ -23,7 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "account_already_in_use": MessageLookupByLibrary.simpleMessage(
-            "The account already exists for that email."),
+            "The account already exists for that email"),
         "an_error_occurred_while_creating_the_user":
             MessageLookupByLibrary.simpleMessage(
                 "An error occurred while creating the user."),
@@ -100,15 +100,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "search_and_shop":
             MessageLookupByLibrary.simpleMessage("Search and Shop"),
+        "search_for": MessageLookupByLibrary.simpleMessage("Search for......."),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
         "the_password_provided_is_too_weak":
             MessageLookupByLibrary.simpleMessage(
-                "The password provided is too weak."),
+                "The password provided is too weak"),
         "user_not_found_for_that_email": MessageLookupByLibrary.simpleMessage(
             "No user found for that email"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
+        "weak_password": MessageLookupByLibrary.simpleMessage(
+            "The password provided is too weak"),
+        "welcome_message": MessageLookupByLibrary.simpleMessage("Good Morning"),
         "wrong_password_or_email_provided_for_that_user":
             MessageLookupByLibrary.simpleMessage(
                 "Wrong Password or Email provided for that user"),

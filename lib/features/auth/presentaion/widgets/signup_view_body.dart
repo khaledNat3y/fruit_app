@@ -6,9 +6,10 @@ import 'package:fruits_app/core/helpers/spacing.dart';
 import 'package:fruits_app/core/widgets/custom_button.dart';
 import 'package:fruits_app/features/auth/presentaion/cubits/signup_cubit/signup_cubit.dart';
 import 'package:fruits_app/features/auth/presentaion/signup_view.dart';
-import 'package:fruits_app/features/auth/presentaion/widgets/custom_text_form_field.dart';
+import 'package:fruits_app/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_app/features/auth/presentaion/widgets/terms_and_conditions.dart';
 
+import '../../../../core/helpers/app_regex.dart';
 import '../../../../core/helpers/snack_bar_helper.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
@@ -45,7 +46,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
               CustomTextFormField(
                   hintText: S.of(context).full_name,
                   onSaved: (useName) {
-                    name = useName!;
+                    name = useName!.trim();
                   },
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -57,12 +58,16 @@ class _SignupViewBodyState extends State<SignupViewBody> {
               CustomTextFormField(
                   hintText: S.of(context).email,
                   onSaved: (useEmail) {
-                    email = useEmail!;
+                    email = useEmail!.trim();
                   },
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return S.of(context).please_enter_you_email;
+                    }
+                    var validPassword = AppRegex.isEmailValid(value);
+                    if (!validPassword) {
+                      return S.of(context).please_enter_a_valid_email;
                     }
                     return null;
                   }),
@@ -70,7 +75,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
               CustomTextFormField(
                 hintText: S.of(context).password,
                 onSaved: (usePassword) {
-                  password = usePassword!;
+                  password = usePassword!.trim();
                 },
                 keyboardType: TextInputType.visiblePassword,
                 isObscureText: isObscureText,
@@ -89,6 +94,10 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return S.of(context).please_enter_you_password;
+                  }
+                  var validPassword = AppRegex.isPasswordValid(value);
+                  if (!validPassword) {
+                    return S.of(context).weak_password;
                   }
                   return null;
                 },

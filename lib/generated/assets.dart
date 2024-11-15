@@ -7,17 +7,24 @@ class Assets {
   static const String fontsCairoMedium = 'assets/fonts/Cairo-Medium.ttf';
   static const String fontsCairoRegular = 'assets/fonts/Cairo-Regular.ttf';
   static const String fontsCairoSemiBold = 'assets/fonts/Cairo-SemiBold.ttf';
+  static const String fontsCairoVariableFont = 'assets/fonts/Cairo-VariableFont.ttf';
   static const String imagesAppIcon = 'assets/images/app_icon.png';
   static const String imagesAppleIcon = 'assets/images/apple_icon.svg';
   static const String imagesEye = 'assets/images/eye.png';
   static const String imagesFacebookIcon = 'assets/images/facebook_icon.svg';
+  static const String imagesFilter = 'assets/images/filter.svg';
+  static const String imagesGithubIcon = 'assets/images/github_icon.svg';
   static const String imagesGoogleIcon = 'assets/images/google_icon.svg';
   static const String imagesLogo = 'assets/images/logo.svg';
+  static const String imagesNotification = 'assets/images/notification.svg';
   static const String imagesPageViewItem1BackgroundImage = 'assets/images/page_view_item1_background_image.svg';
   static const String imagesPageViewItem1Image = 'assets/images/page_view_item1_image.svg';
   static const String imagesPageViewItem2BackgroundImage = 'assets/images/page_view_item2_background_image.svg';
   static const String imagesPageViewItem2Image = 'assets/images/page_view_item2_image.svg';
   static const String imagesPlant = 'assets/images/plant.svg';
+  static const String imagesProfileImage = 'assets/images/profile_image.png';
+  static const String imagesSearchIcon = 'assets/images/search_icon.svg';
+  static const String imagesSettingsIcon = 'assets/images/settings_icon.svg';
   static const String imagesSplashButton = 'assets/images/splash_button.svg';
 
 }
