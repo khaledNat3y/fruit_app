@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:fruits_app/core/routing/routes.dart';
 import 'package:fruits_app/features/auth/presentaion/signin_view.dart';
 import 'package:fruits_app/features/auth/presentaion/signup_view.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:fruits_app/features/on_boarding/presentaion/views/on_boarding_view.dart';
 import 'package:fruits_app/features/splash/presentation/view/splash_view.dart';
+
+import '../../features/home/presentation/views/home_view.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -27,6 +30,10 @@ class AppRouter {
       case Routes.signupScreen:
         return MaterialPageRoute(
           builder: (context) => const SignupView(),
+        );
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (context) => const HomeView(),
         );
       default:
         return null;

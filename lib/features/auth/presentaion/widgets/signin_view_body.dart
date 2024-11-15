@@ -8,7 +8,7 @@ import 'package:fruits_app/core/theming/app_colors.dart';
 import 'package:fruits_app/core/theming/text_styles.dart';
 import 'package:fruits_app/core/widgets/custom_button.dart';
 import 'package:fruits_app/features/auth/presentaion/cubits/signin_cubit/signin_cubit.dart';
-import 'package:fruits_app/features/auth/presentaion/widgets/custom_text_form_field.dart';
+import 'package:fruits_app/core/widgets/custom_text_form_field.dart';
 
 import '../../../../generated/assets.dart';
 import '../../../../generated/l10n.dart';
@@ -47,7 +47,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                   hintText: S.of(context).email,
                   keyboardType: TextInputType.emailAddress,
                   onSaved: (userEmail) {
-                    email = userEmail!;
+                    email = userEmail!.trim();
                   },
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -62,7 +62,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                   isObscureText: isObscureText,
                   keyboardType: TextInputType.visiblePassword,
                   onSaved: (userPassword) {
-                    password = userPassword!;
+                    password = userPassword!.trim();
                   },
                   suffixIcon: GestureDetector(
                     onTap: () {

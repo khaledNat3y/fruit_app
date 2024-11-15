@@ -98,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "search_and_shop": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "search_for": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
         "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "start_now": MessageLookupByLibrary.simpleMessage("ابدء الان"),
@@ -108,6 +109,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "weak_password":
             MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة جدا"),
+        "welcome_message":
+            MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
         "wrong_password_or_email_provided_for_that_user":
             MessageLookupByLibrary.simpleMessage(
                 "كلمة المرور او البريد الالكتروني غير صحيحة لهذا المستخدم"),

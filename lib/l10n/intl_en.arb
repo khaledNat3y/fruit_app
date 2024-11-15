@@ -50,6 +50,9 @@
   "please_check_your_internet_connection_and_try_again" : "Please check your internet connection and try again.",
   "user_not_found_for_that_email" : "No user found for that email",
   "wrong_password_or_email_provided_for_that_user" : "Wrong Password or Email provided for that user",
-  "weak_password" : "The password provided is too weak"
+  "weak_password" : "The password provided is too weak",
+  "welcome_message" : "Good Morning",
+  "search_for" : "Search for......."
+
 }
 
