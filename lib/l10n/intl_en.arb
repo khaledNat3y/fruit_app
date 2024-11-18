@@ -52,7 +52,9 @@
   "wrong_password_or_email_provided_for_that_user" : "Wrong Password or Email provided for that user",
   "weak_password" : "The password provided is too weak",
   "welcome_message" : "Good Morning",
-  "search_for" : "Search for......."
+  "search_for" : "Search for.......",
+  "eid_offers" : "Eid Offers",
+  "discount" : "Discounts"
 
 }
 

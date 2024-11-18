@@ -589,6 +589,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Eid Offers`
+  String get eid_offers {
+    return Intl.message(
+      'Eid Offers',
+      name: 'eid_offers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discounts`
+  String get discount {
+    return Intl.message(
+      'Discounts',
+      name: 'discount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

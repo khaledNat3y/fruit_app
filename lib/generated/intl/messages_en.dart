@@ -32,8 +32,10 @@ class MessageLookup extends MessageLookupByLibrary {
                 "by_creating_an_account_you_agree_to"),
         "cart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "discount": MessageLookupByLibrary.simpleMessage("Discounts"),
         "dont_have_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "eid_offers": MessageLookupByLibrary.simpleMessage("Eid Offers"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
