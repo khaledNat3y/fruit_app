@@ -32,8 +32,10 @@ class MessageLookup extends MessageLookupByLibrary {
                 "من خلال إنشاء حساب ، فإنك توافق على "),
         "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
         "confirm": MessageLookupByLibrary.simpleMessage("تاكيد"),
+        "discount": MessageLookupByLibrary.simpleMessage("خصم"),
         "dont_have_account":
             MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
+        "eid_offers": MessageLookupByLibrary.simpleMessage("عروض العيد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "full_name": MessageLookupByLibrary.simpleMessage("الاسم كامل"),

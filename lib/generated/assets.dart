@@ -12,7 +12,9 @@ class Assets {
   static const String imagesAppleIcon = 'assets/images/apple_icon.svg';
   static const String imagesEye = 'assets/images/eye.png';
   static const String imagesFacebookIcon = 'assets/images/facebook_icon.svg';
+  static const String imagesFeaturedItemBackground = 'assets/images/featured_item_background.svg';
   static const String imagesFilter = 'assets/images/filter.svg';
+  static const String imagesFruits = 'assets/images/fruits.png';
   static const String imagesGithubIcon = 'assets/images/github_icon.svg';
   static const String imagesGoogleIcon = 'assets/images/google_icon.svg';
   static const String imagesLogo = 'assets/images/logo.svg';
@@ -26,5 +28,6 @@ class Assets {
   static const String imagesSearchIcon = 'assets/images/search_icon.svg';
   static const String imagesSettingsIcon = 'assets/images/settings_icon.svg';
   static const String imagesSplashButton = 'assets/images/splash_button.svg';
+  static const String imagesWatermelonTest = 'assets/images/watermelon_test.png';
 
 }

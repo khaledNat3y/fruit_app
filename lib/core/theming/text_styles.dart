@@ -17,7 +17,10 @@ abstract class AppStyles {
     fontSize: 23.sp,
     fontWeight: FontWeightHelper.bold,
   );
-
+  static TextStyle font13Bold = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelper.bold,
+  );
   static TextStyle font13SemiBold = TextStyle(
     fontSize: 13.sp,
     fontWeight: FontWeightHelper.semiBold,

@@ -52,5 +52,7 @@
   "wrong_password_or_email_provided_for_that_user" : "كلمة المرور او البريد الالكتروني غير صحيحة لهذا المستخدم",
   "weak_password" : "كلمة المرور ضعيفة جدا",
   "welcome_message" : "صباح الخير !..",
-  "search_for" : "ابحث عن......."
+  "search_for" : "ابحث عن.......",
+  "eid_offers" : "عروض العيد",
+  "discount" : "خصم"
 }
