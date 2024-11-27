@@ -27,10 +27,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "an_error_occurred_while_creating_the_user":
             MessageLookupByLibrary.simpleMessage(
                 "An error occurred while creating the user."),
+        "best_selling": MessageLookupByLibrary.simpleMessage("Best Selling"),
         "by_creating_an_account_you_agree_to":
             MessageLookupByLibrary.simpleMessage(
                 "by_creating_an_account_you_agree_to"),
-        "cart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "discount": MessageLookupByLibrary.simpleMessage("Discounts"),
         "dont_have_account":
@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout_success":
             MessageLookupByLibrary.simpleMessage("Successfully logged out"),
         "make_account": MessageLookupByLibrary.simpleMessage("create one"),
+        "more": MessageLookupByLibrary.simpleMessage("More"),
         "new_account_registration":
             MessageLookupByLibrary.simpleMessage("New Account Registration"),
         "onboarding_intro_one": MessageLookupByLibrary.simpleMessage(
@@ -93,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter your name"),
         "please_enter_you_password":
             MessageLookupByLibrary.simpleMessage("Please enter your password"),
+        "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "register_error":
@@ -104,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search and Shop"),
         "search_for": MessageLookupByLibrary.simpleMessage("Search for......."),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "shopping_cart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
         "the_password_provided_is_too_weak":

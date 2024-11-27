@@ -23,7 +23,7 @@ class CustomHomeAppBar extends StatelessWidget {
           color: Color(0xFFEEF8ED),
           shape: OvalBorder(),
         ),
-        child: SvgPicture.asset(Assets.imagesNotification),
+        child: SvgPicture.asset(Assets.svgsNotification),
       )
 
     );

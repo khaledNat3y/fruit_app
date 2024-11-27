@@ -29,16 +29,16 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            SvgPicture.asset(Assets.imagesPlant),
+            SvgPicture.asset(Assets.svgsPlant),
           ],
         ),
-        SvgPicture.asset(Assets.imagesLogo),
-        SvgPicture.asset(Assets.imagesSplashButton, fit: BoxFit.fill,),
+        SvgPicture.asset(Assets.svgsLogo),
+        SvgPicture.asset(Assets.svgsSplashButton, fit: BoxFit.fill,),
       ],
     );
   }
   void executeNavigation() {
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       checkIfUserIsLoggedIn() ? context.pushReplacementNamed(Routes.loginScreen) : context.pushReplacementNamed(Routes.onBoardingScreen);
     });
   }

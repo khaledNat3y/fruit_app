@@ -27,10 +27,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "an_error_occurred_while_creating_the_user":
             MessageLookupByLibrary.simpleMessage(
                 "حدث خطأ اثناء أنشاء المستخدم."),
+        "best_selling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "by_creating_an_account_you_agree_to":
             MessageLookupByLibrary.simpleMessage(
                 "من خلال إنشاء حساب ، فإنك توافق على "),
-        "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
         "confirm": MessageLookupByLibrary.simpleMessage("تاكيد"),
         "discount": MessageLookupByLibrary.simpleMessage("خصم"),
         "dont_have_account":
@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout_success":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الخروج بنجاح"),
         "make_account": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+        "more": MessageLookupByLibrary.simpleMessage("المزيد"),
         "new_account_registration":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "onboarding_intro_one": MessageLookupByLibrary.simpleMessage(
@@ -92,7 +93,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("من فضلك أدخل اسمك"),
         "please_enter_you_password":
             MessageLookupByLibrary.simpleMessage("من فضلك أدخل كلمة المرور"),
-        "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
+        "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "register": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "register_error": MessageLookupByLibrary.simpleMessage(
             "البريد الالكتروني مستخدم من قبل"),
@@ -102,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "search_and_shop": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
         "search_for": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
         "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
+        "shopping_cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "start_now": MessageLookupByLibrary.simpleMessage("ابدء الان"),
         "the_password_provided_is_too_weak":
