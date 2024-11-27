@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fruits_app/core/routing/routes.dart';
 import 'package:fruits_app/features/auth/presentaion/signin_view.dart';
 import 'package:fruits_app/features/auth/presentaion/signup_view.dart';
+import 'package:fruits_app/features/best_selling_fruits/presentation/views/best_selling_view.dart';
 import 'package:fruits_app/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:fruits_app/features/on_boarding/presentaion/views/on_boarding_view.dart';
 import 'package:fruits_app/features/splash/presentation/view/splash_view.dart';
@@ -34,6 +35,10 @@ class AppRouter {
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (context) => const HomeView(),
+        );
+      case Routes.bestSellingScreen:
+        return MaterialPageRoute(
+          builder: (context) => const BestSellingView(),
         );
       default:
         return null;
