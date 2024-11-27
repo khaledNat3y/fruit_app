@@ -7,8 +7,6 @@
   "skip" : "Skip",
   "home" : "Home",
   "search" : "Search",
-  "cart" : "Shopping Cart",
-  "profile" : "Profile",
   "settings" : "Settings",
   "login" : "Login",
   "register" : "Register",
@@ -54,7 +52,12 @@
   "welcome_message" : "Good Morning",
   "search_for" : "Search for.......",
   "eid_offers" : "Eid Offers",
-  "discount" : "Discounts"
+  "discount" : "Discounts",
+  "best_selling" : "Best Selling",
+  "more" : "More",
+  "products" : "Products",
+  "shopping_cart" : "Shopping Cart",
+  "profile" : "Profile"
 
 }
 

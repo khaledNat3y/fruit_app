@@ -15,12 +15,11 @@ class FeaturedItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.sizeOf(context).width;
-    return AspectRatio(
-      aspectRatio: 342 / 158,
-      child: Container(
-        width: screenWidth,
-        color: AppColors.white,
+    double screenWidth = MediaQuery.sizeOf(context).width - 32;
+    return SizedBox(
+      width: screenWidth,
+      child: AspectRatio(
+        aspectRatio: 342 / 158,
         child: Stack(
           children: [
             Positioned.fill(
@@ -28,14 +27,14 @@ class FeaturedItem extends StatelessWidget {
                 bottom: 0,
                 right: screenWidth * 0.4,
                 child: SvgPicture.asset(
-                  Assets.imagesPageViewItem2Image,
+                  Assets.svgsPageViewItem2Image,
                   fit: BoxFit.fill,
                 )),
             Container(
               width: screenWidth * 0.5,
               decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: svg.Svg(Assets.imagesFeaturedItemBackground),
+                      image: svg.Svg(Assets.svgsFeaturedItemBackground),
                       fit: BoxFit.fill)),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),

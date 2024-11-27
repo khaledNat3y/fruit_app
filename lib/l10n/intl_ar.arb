@@ -7,8 +7,6 @@
   "skip" : "تخطي",
   "home" : "الرئيسية",
   "search" : "بحث",
-  "cart" : "سلة التسوق",
-  "profile" : "الملف الشخصي",
   "settings" : "الاعدادات",
   "login" : "تسجيل دخول",
   "register" : "حساب جديد",
@@ -54,5 +52,10 @@
   "welcome_message" : "صباح الخير !..",
   "search_for" : "ابحث عن.......",
   "eid_offers" : "عروض العيد",
-  "discount" : "خصم"
+  "discount" : "خصم",
+  "best_selling" : "الأكثر مبيعًا",
+  "more" : "المزيد",
+  "products" : "المنتجات",
+  "shopping_cart" : "عربة التسوق",
+  "profile" : "حسابي"
 }

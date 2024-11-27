@@ -130,26 +130,6 @@ class S {
     );
   }
 
-  /// `Shopping Cart`
-  String get cart {
-    return Intl.message(
-      'Shopping Cart',
-      name: 'cart',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Profile`
-  String get profile {
-    return Intl.message(
-      'Profile',
-      name: 'profile',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Settings`
   String get settings {
     return Intl.message(
@@ -605,6 +585,56 @@ class S {
     return Intl.message(
       'Discounts',
       name: 'discount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Best Selling`
+  String get best_selling {
+    return Intl.message(
+      'Best Selling',
+      name: 'best_selling',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More`
+  String get more {
+    return Intl.message(
+      'More',
+      name: 'more',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Products`
+  String get products {
+    return Intl.message(
+      'Products',
+      name: 'products',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shopping Cart`
+  String get shopping_cart {
+    return Intl.message(
+      'Shopping Cart',
+      name: 'shopping_cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
       desc: '',
       args: [],
     );

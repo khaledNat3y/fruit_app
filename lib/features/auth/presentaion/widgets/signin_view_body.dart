@@ -95,13 +95,13 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                     validateMethod(context);
                   }),
               verticalSpace(33),
-              DontHaveAnAccount(),
+              const DontHaveAnAccount(),
               verticalSpace(37),
-              OrLoginWith(),
+              const OrLoginWith(),
               verticalSpace(21),
               CustomThirdPartyLoginWidget(
                 title: S.of(context).login_with_google,
-                image: Assets.imagesGoogleIcon,
+                image: Assets.svgsGoogleIcon,
                 onTap: (){
                   context.read<SignInCubit>().signInWithGoogle();
                 },
@@ -111,7 +111,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                 children: [
                   CustomThirdPartyLoginWidget(
                     title: S.of(context).login_with_apple,
-                    image: Assets.imagesAppleIcon,
+                    image: Assets.svgsAppleIcon,
                     onTap: (){
                       context.read<SignInCubit>().signInWithApple();
                     },
@@ -121,7 +121,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
               ) : SizedBox(),
               CustomThirdPartyLoginWidget(
                 title: S.of(context).login_with_facebook,
-                image: Assets.imagesFacebookIcon,
+                image: Assets.svgsFacebookIcon,
                 onTap: (){
                   context.read<SignInCubit>().signInWithFacebook();
                 },
