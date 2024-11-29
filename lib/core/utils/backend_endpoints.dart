@@ -5,4 +5,8 @@ class BackendEndpoints {
 
   static const String isUserExist = "users";
 
+  static const String kUserData = "userData";
+
+
+
 }

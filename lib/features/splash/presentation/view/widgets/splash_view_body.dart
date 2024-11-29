@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_app/core/constant/constant.dart';
 import 'package:fruits_app/core/helpers/extensions.dart';
+import 'package:fruits_app/core/services/firebase_auth_service.dart';
 import 'package:fruits_app/core/services/shared_preferences_singleton.dart';
 
 import '../../../../../core/routing/routes.dart';
@@ -17,9 +18,10 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
-    executeNavigation();
     super.initState();
+    executeNavigation();
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,13 +35,28 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           ],
         ),
         SvgPicture.asset(Assets.svgsLogo),
-        SvgPicture.asset(Assets.svgsSplashButton, fit: BoxFit.fill,),
+        SvgPicture.asset(
+          Assets.svgsSplashButton,
+          fit: BoxFit.fill,
+        ),
       ],
     );
   }
+
   void executeNavigation() {
     Future.delayed(const Duration(seconds: 3), () {
-      checkIfUserIsLoggedIn() ? context.pushReplacementNamed(Routes.loginScreen) : context.pushReplacementNamed(Routes.onBoardingScreen);
+      if (!mounted) return; // Check if the widget is still mounted
+
+      if (checkIfUserIsLoggedIn()) {
+        var isLoggedIn = FirebaseAuthService().isUserLoggedIn();
+        if (isLoggedIn) {
+          context.pushReplacementNamed(Routes.homeScreen);
+        } else {
+          context.pushReplacementNamed(Routes.loginScreen);
+        }
+      } else {
+        context.pushReplacementNamed(Routes.onBoardingScreen);
+      }
     });
   }
 

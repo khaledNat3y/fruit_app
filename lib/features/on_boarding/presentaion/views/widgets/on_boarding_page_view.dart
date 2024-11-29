@@ -40,7 +40,7 @@ class OnBoardingPageView extends StatelessWidget {
                 Text(
                   S.of(context).search_and_shop,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Color(0xFF0C0D0D),
                     fontSize: 23,
                     fontFamily: 'Cairo',
