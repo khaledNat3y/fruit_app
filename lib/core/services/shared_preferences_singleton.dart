@@ -13,4 +13,8 @@ class Prefs {
   static getBool(String key) {
     return _instance.getBool(key) ?? false;
   }
+
+  static setString(String key, String value) {
+    return _instance.setString(key, value);
+  }
 }
