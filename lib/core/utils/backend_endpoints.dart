@@ -7,6 +7,8 @@ class BackendEndpoints {
 
   static const String kUserData = "userData";
 
+  static const String images = "images";
 
+  static const String getProducts = "products";
 
 }

@@ -25,8 +25,8 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
       {required String email,
-      required String password,
-      required String name}) async {
+        required String password,
+        required String name}) async {
     User? user;
     try {
       user = await firebaseAuthService.createUserWithEmailAndPassword(
@@ -57,7 +57,7 @@ class AuthRepoImpl extends AuthRepo {
       var user = await firebaseAuthService.signInWithEmailAndPassword(
           email: email, password: password);
       var userEntity = await getUserData(uid: user.uid);
-
+      saveUserData(user: userEntity);
       return Right(userEntity);
     } on CustomException catch (e) {
       return Left(ServerFailure(message: e.message));
@@ -76,7 +76,9 @@ class AuthRepoImpl extends AuthRepo {
       var isUserExist = await databaseService.checkIfDataExists(
           path: BackendEndpoints.isUserExist, documentId: user.uid);
       if (isUserExist) {
-        await getUserData(uid: user.uid);
+         await getUserData(uid: user.uid);
+        saveUserData(user: userEntity);
+
       } else {
         await addUserData(user: userEntity);
       }
@@ -94,7 +96,7 @@ class AuthRepoImpl extends AuthRepo {
     try {
       user = await firebaseAuthService.signInWithGoogle();
       var userEntity =
-          UserModel(name: user.displayName!, email: user.email!, uid: user.uid);
+      UserModel(name: user.displayName!, email: user.email!, uid: user.uid);
       var isUserExist = await databaseService.checkIfDataExists(
           path: BackendEndpoints.isUserExist, documentId: user.uid);
       if (isUserExist) {
@@ -116,7 +118,7 @@ class AuthRepoImpl extends AuthRepo {
     try {
       user = await firebaseAuthService.signInWithApple();
       var userEntity =
-          UserModel(name: user.displayName!, email: user.email!, uid: user.uid);
+      UserModel(name: user.displayName!, email: user.email!, uid: user.uid);
       var isUserExist = await databaseService.checkIfDataExists(
           path: BackendEndpoints.isUserExist, documentId: user.uid);
       if (isUserExist) {

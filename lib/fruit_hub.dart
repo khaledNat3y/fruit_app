@@ -16,7 +16,7 @@ class FruitHub extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       child: MaterialApp(
-        localizationsDelegates: [
+        localizationsDelegates: const [
           S.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
@@ -33,6 +33,7 @@ class FruitHub extends StatelessWidget {
             appBarTheme: const AppBarTheme(
               backgroundColor: AppColors.white,
             )),
+
         debugShowCheckedModeBanner: false,
         title: 'Fruits Hub',
         onGenerateRoute: appRouter.generateRoute,
