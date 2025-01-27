@@ -100,6 +100,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "البريد الالكتروني مستخدم من قبل"),
         "register_success":
             MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
+        "results": MessageLookupByLibrary.simpleMessage("نتائج"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "search_and_shop": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
         "search_for": MessageLookupByLibrary.simpleMessage("ابحث عن......."),

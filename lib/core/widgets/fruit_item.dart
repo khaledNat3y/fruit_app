@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruits_app/core/entities/product_entity.dart';
 import 'package:fruits_app/core/helpers/spacing.dart';
 import 'package:fruits_app/core/theming/app_colors.dart';
 import 'package:fruits_app/core/theming/text_styles.dart';
@@ -8,7 +9,9 @@ import '../../generated/assets.dart';
 import 'custom_network_image.dart';
 
 class FruitItem extends StatelessWidget {
-  const FruitItem({super.key});
+  final ProductEntity productEntity;
+
+  const FruitItem({super.key, required this.productEntity});
 
   @override
   Widget build(BuildContext context) {
@@ -34,16 +37,11 @@ class FruitItem extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  color: Colors.transparent,
-                  height: 100,
-                  width: 100,
-                  child: Image.asset(Assets.imagesWatermelonTest),
-                ),
+                Flexible(child: CustomNetworkImage(imageUrl: productEntity.imageUrl ?? "")),
                 verticalSpace(24),
                 ListTile(
                   title: Text(
-                    "تفاح",
+                    productEntity.name,
                     textAlign: TextAlign.right,
                     style: AppStyles.font16SemiBold,
                   ),
@@ -51,7 +49,7 @@ class FruitItem extends StatelessWidget {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: '${100}جنية ',
+                          text: '${productEntity.price}جنية ',
                           style: AppStyles.font13Bold.copyWith(
                             color: AppColors.secondaryColor,
                           ),
@@ -69,7 +67,7 @@ class FruitItem extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: 'كيلو',
+                          text: "كيلو",
                           style: AppStyles.font13SemiBold.copyWith(
                             color: AppColors.lightSecondaryColor,
                           ),
@@ -79,8 +77,7 @@ class FruitItem extends StatelessWidget {
                     textAlign: TextAlign.right,
                   ),
                   trailing: GestureDetector(
-                    onTap: () {
-                    },
+                    onTap: () {},
                     child: const CircleAvatar(
                       backgroundColor: AppColors.primaryColor,
                       child: Icon(
@@ -98,3 +95,5 @@ class FruitItem extends StatelessWidget {
     );
   }
 }
+
+

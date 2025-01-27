@@ -1,28 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../core/cubits/product_cubit/products_cubit.dart';
+import 'package:fruits_app/core/cubits/product_cubit/products_cubit.dart';
+import 'package:fruits_app/core/widgets/build_app_bar.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/products_grid_view_bloc_builder.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/products_view_header.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/widgets/search_text_field.dart';
-import 'product_grid_view.dart';
-import 'products_grid_view_bloc_builder.dart';
-import 'best_selling_header.dart';
+import '../../../../../generated/l10n.dart';
 import 'custom_home_app_bar.dart';
-import 'featured_list.dart';
 
-class HomeViewBody extends StatefulWidget {
-  const HomeViewBody({
-    super.key,
-  });
+class ProductsViewBody extends StatefulWidget {
+  const ProductsViewBody({super.key});
 
   @override
-  State<HomeViewBody> createState() => _HomeViewBodyState();
+  State<ProductsViewBody> createState() => _ProductsViewBodyState();
 }
 
-class _HomeViewBodyState extends State<HomeViewBody> {
+class _ProductsViewBodyState extends State<ProductsViewBody> {
   @override
   void initState() {
-    context.read<ProductsCubit>().getBestSellingProducts();
+    context.read<ProductsCubit>().getProducts();
     super.initState();
   }
   @override
@@ -32,22 +30,16 @@ class _HomeViewBodyState extends State<HomeViewBody> {
         SliverToBoxAdapter(
           child: Column(
             children: [
-              const CustomHomeAppBar(),
+              buildAppBar(context, title: S.of(context).products, showBackButton: false),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                 child: const SearchTextField(),
               ),
-              verticalSpace(12),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8.w),
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(4.r),
-                    child: const FeaturedList()),
-              ),
+
               verticalSpace(12),
               Padding(
                 padding:  EdgeInsets.all(12.0.w),
-                child: const BestSellingHeader(),
+                child: ProductViewHeader(productLength: context.read<ProductsCubit>().productsLength,),
               ),
               verticalSpace(12),
             ],
@@ -58,4 +50,3 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     );
   }
 }
-

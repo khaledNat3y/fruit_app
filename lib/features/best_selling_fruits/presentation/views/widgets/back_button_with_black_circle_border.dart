@@ -9,18 +9,23 @@ class BackButtonWithBlackCircleBorder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          border: Border.all(color: AppColors.lighterGrey),
-        ),
-        child: SizedBox(
-          width: 45.w,
-          height: 45.h, 
-          child: IconButton(onPressed: (){
-            context.pop();
-          }, icon: const Icon(Icons.arrow_back_ios_new),),
+    return GestureDetector(
+      onTap: () {
+        context.pop();
+      },
+      child: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(color: AppColors.lighterGrey),
+          ),
+          child: SizedBox(
+            width: 45.w,
+            height: 45.h,
+            child: IconButton(onPressed: (){
+              context.pop();
+            }, icon: const Icon(Icons.arrow_back_ios_new),),
+          ),
         ),
       ),
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_app/core/helpers/spacing.dart';
 import 'package:fruits_app/core/theming/text_styles.dart';
-import 'package:fruits_app/features/home/presentation/views/widgets/best_selling_grid_view.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/product_grid_view.dart';
 import 'package:fruits_app/generated/l10n.dart';
 
 class BestSellingViewBody extends StatelessWidget {
@@ -29,7 +29,7 @@ class BestSellingViewBody extends StatelessWidget {
             ],
           ),
         ),
-        const BestSellingGridView(),
+        const ProductGridView(products: [],),
       ],
     );
   }

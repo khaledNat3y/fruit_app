@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/core/repos/product_repo/product_repo.dart';
+import 'package:fruits_app/core/repos/product_repo/product_repo_impl.dart';
 import 'package:fruits_app/core/services/data_base_service.dart';
 import 'package:fruits_app/core/services/firestore_service.dart';
 import 'package:get_it/get_it.dart';
@@ -19,4 +21,6 @@ setupGetIt() {
         firebaseAuthService: getIt<FirebaseAuthService>(),
         databaseService: getIt<DatabaseService>()),
   );
+  getIt.registerSingleton<ProductsRepo>(
+      ProductsRepoImpl(getIt<DatabaseService>()));
 }
