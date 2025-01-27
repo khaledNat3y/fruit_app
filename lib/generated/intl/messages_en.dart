@@ -101,6 +101,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email already in use"),
         "register_success":
             MessageLookupByLibrary.simpleMessage("Successfully registered"),
+        "results": MessageLookupByLibrary.simpleMessage("Results"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "search_and_shop":
             MessageLookupByLibrary.simpleMessage("Search and Shop"),

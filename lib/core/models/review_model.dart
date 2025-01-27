@@ -1,5 +1,3 @@
-
-
 import '../entities/review_entity.dart';
 
 class ReviewModel {
@@ -9,46 +7,47 @@ class ReviewModel {
   final String date;
   final String reviewDescription;
 
-  ReviewModel({
-    required this.name,
-    required this.image,
-    required this.ratting,
-    required this.date,
-    required this.reviewDescription,
-  });
+  ReviewModel(
+      {required this.name,
+        required this.image,
+        required this.ratting,
+        required this.date,
+        required this.reviewDescription});
 
-  factory ReviewModel.fromEntity(ReviewEntity entity) {
-    return ReviewModel(name: entity.name,
-        image: entity.image,
-        ratting: entity.ratting,
-        date: entity.date,
-        reviewDescription: entity.reviewDescription);
+  factory ReviewModel.fromEntity(ReviewEntity reviewEntity) {
+    return ReviewModel(
+        name: reviewEntity.name,
+        image: reviewEntity.image,
+        ratting: reviewEntity.ratting,
+        date: reviewEntity.date,
+        reviewDescription: reviewEntity.reviewDescription);
   }
 
   factory ReviewModel.fromJson(Map<String, dynamic> json) {
     return ReviewModel(
-      name: json['name'],
-      image: json['image'],
-      ratting: json['ratting'],
-      date: json['date'],
-      reviewDescription: json['reviewDescription'],
-    );
+        name: json['name'],
+        image: json['image'],
+        ratting: json['ratting'],
+        date: json['date'],
+        reviewDescription: json['reviewDescription']);
   }
+
   ReviewEntity toEntity() {
-    return ReviewEntity(name: name,
+    return ReviewEntity(
+        name: name,
         image: image,
         ratting: ratting,
         date: date,
         reviewDescription: reviewDescription);
   }
 
-  Map<String, dynamic> toJson() {
+  toJson() {
     return {
       'name': name,
       'image': image,
       'ratting': ratting,
       'date': date,
-      'reviewDescription': reviewDescription,
+      'reviewDescription': reviewDescription
     };
   }
 }

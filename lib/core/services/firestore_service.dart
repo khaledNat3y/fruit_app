@@ -37,8 +37,6 @@ class FireStoreService implements DatabaseService {
         }
       }
 
-
-
       var result = await data.get();
       return result.docs.map((e) => e.data()).toList();
     }

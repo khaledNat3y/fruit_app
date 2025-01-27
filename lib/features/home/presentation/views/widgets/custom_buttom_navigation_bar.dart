@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_app/features/home/domain/entites/bottom_navigation_bar_entity.dart';
+import 'package:intl/intl.dart';
 import '../../../../../core/theming/app_colors.dart';
 import 'navigation_bar_item.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
-  const CustomBottomNavigationBar({super.key});
+  final ValueChanged<int>? onItemTapped;
+  const CustomBottomNavigationBar({super.key, required this.onItemTapped});
 
   @override
   State<CustomBottomNavigationBar> createState() => _CustomBottomNavigationBarState();
@@ -43,6 +45,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               onTap: () {
                 setState(() {
                   currentIndex = index;
+                  widget.onItemTapped!(index);
                 });
               },
               child: NavigationBarItem(

@@ -2,7 +2,6 @@
 class Assets {
   Assets._();
 
-  static const String assetsImagesAppIcon = 'assets/images/app_icon.png';
   static const String fontsCairoBold = 'assets/fonts/Cairo-Bold.ttf';
   static const String fontsCairoMedium = 'assets/fonts/Cairo-Medium.ttf';
   static const String fontsCairoRegular = 'assets/fonts/Cairo-Regular.ttf';
@@ -14,6 +13,7 @@ class Assets {
   static const String imagesProfileImage = 'assets/images/profile_image.png';
   static const String imagesWatermelonTest = 'assets/images/watermelon_test.png';
   static const String svgsAppleIcon = 'assets/svgs/apple_icon.svg';
+  static const String svgsArrowSwapHorizontal = 'assets/svgs/arrow-swap-horizontal.svg';
   static const String svgsFacebookIcon = 'assets/svgs/facebook_icon.svg';
   static const String svgsFeaturedItemBackground = 'assets/svgs/featured_item_background.svg';
   static const String svgsFilter = 'assets/svgs/filter.svg';
