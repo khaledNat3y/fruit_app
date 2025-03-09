@@ -4,20 +4,27 @@ import 'package:fruits_app/features/best_selling_fruits/presentation/views/widge
 import '../theming/text_styles.dart';
 import 'notification_widget.dart';
 
-AppBar buildAppBar(BuildContext context, {required String title, bool showBackButton = true}) {
+AppBar buildAppBar(BuildContext context,
+    {required String title,
+    bool showBackButton = true,
+    bool showNotification = true}) {
   return AppBar(
     elevation: 0,
     actions: [
-      Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0.w),
-        child: const NotificationWidget(),
+      Visibility(
+        visible: showNotification,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.0.w),
+          child: const NotificationWidget(),
+        ),
       )
     ],
-    title: Text(title, style: AppStyles.font19Bold,),
+    title: Text(
+      title,
+      style: AppStyles.font19Bold,
+    ),
     centerTitle: true,
-    leading:  Visibility(
-      visible: showBackButton,
-        child: BackButtonWithBlackCircleBorder()),
+    leading: Visibility(
+        visible: showBackButton, child: const BackButtonWithBlackCircleBorder(withBorder: false,)),
   );
 }
-

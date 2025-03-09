@@ -5,7 +5,8 @@ import 'package:fruits_app/core/helpers/extensions.dart';
 import 'package:fruits_app/core/theming/app_colors.dart';
 
 class BackButtonWithBlackCircleBorder extends StatelessWidget {
-  const BackButtonWithBlackCircleBorder({super.key});
+  final bool withBorder;
+  const BackButtonWithBlackCircleBorder({super.key, required this.withBorder});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +17,9 @@ class BackButtonWithBlackCircleBorder extends StatelessWidget {
       child: Center(
         child: Container(
           decoration: BoxDecoration(
+            color: AppColors.white,
             shape: BoxShape.circle,
-            border: Border.all(color: AppColors.lighterGrey),
+            border: withBorder ? Border.all(color: AppColors.lighterGrey):Border.all(color: AppColors.white),
           ),
           child: SizedBox(
             width: 45.w,
