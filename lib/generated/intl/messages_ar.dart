@@ -31,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "by_creating_an_account_you_agree_to":
             MessageLookupByLibrary.simpleMessage(
                 "من خلال إنشاء حساب ، فإنك توافق على "),
+        "cart": MessageLookupByLibrary.simpleMessage("السلة"),
+        "cart_is_empty":
+            MessageLookupByLibrary.simpleMessage("لا يوجد منتجات في السلة"),
         "confirm": MessageLookupByLibrary.simpleMessage("تاكيد"),
         "discount": MessageLookupByLibrary.simpleMessage("خصم"),
         "dont_have_account":
@@ -68,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "our_terms_and_conditions": MessageLookupByLibrary.simpleMessage(
             " الشروط والأحكام الخاصة بنا "),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "please_accept_the_terms_and_conditions":
             MessageLookupByLibrary.simpleMessage("يرجى قبول الشروط والأحكام"),
         "please_check_your_internet_connection_and_try_again":
@@ -93,7 +97,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("من فضلك أدخل اسمك"),
         "please_enter_you_password":
             MessageLookupByLibrary.simpleMessage("من فضلك أدخل كلمة المرور"),
+        "pound": MessageLookupByLibrary.simpleMessage("جنيه"),
+        "product_successfully_added":
+            MessageLookupByLibrary.simpleMessage("تم اضافة المنتج بنجاح"),
+        "product_successfully_removed":
+            MessageLookupByLibrary.simpleMessage("تم حذف المنتج بنجاح"),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
+        "products_in_your_cart":
+            MessageLookupByLibrary.simpleMessage("منتجات في سله التسوق"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "register": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "register_error": MessageLookupByLibrary.simpleMessage(
@@ -121,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "كلمة المرور او البريد الالكتروني غير صحيحة لهذا المستخدم"),
         "you_already_have_an_account":
-            MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟")
+            MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
+        "you_have": MessageLookupByLibrary.simpleMessage("لديك")
       };
 }

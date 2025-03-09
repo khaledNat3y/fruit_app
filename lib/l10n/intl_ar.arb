@@ -58,5 +58,13 @@
   "products" : "المنتجات",
   "shopping_cart" : "عربة التسوق",
   "profile" : "حسابي",
-  "results" : "نتائج"
+  "results" : "نتائج",
+  "cart" : "السلة",
+  "you_have" : "لديك",
+  "products_in_your_cart" : "منتجات في سله التسوق",
+  "cart_is_empty" : "لا يوجد منتجات في السلة",
+  "payment" : "الدفع",
+  "pound" : "جنيه",
+  "product_successfully_added" : "تم اضافة المنتج بنجاح",
+  "product_successfully_removed" : "تم حذف المنتج بنجاح"
 }

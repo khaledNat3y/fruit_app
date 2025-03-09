@@ -58,7 +58,15 @@
   "products" : "Products",
   "shopping_cart" : "Shopping Cart",
   "profile" : "Profile",
-  "results" : "Results"
+  "results" : "Results",
+  "cart" : "Cart",
+  "you_have" : "You have",
+  "products_in_your_cart" : "Products in your cart",
+  "cart_is_empty" : "No Products in your cart",
+  "payment" : "Payment",
+  "pound" : "Pound",
+  "product_successfully_added" : "Product successfully added",
+  "product_successfully_removed" : "Product successfully removed"
 
 }
 

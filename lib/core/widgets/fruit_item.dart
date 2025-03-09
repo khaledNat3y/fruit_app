@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_app/core/entities/product_entity.dart';
 import 'package:fruits_app/core/helpers/spacing.dart';
 import 'package:fruits_app/core/theming/app_colors.dart';
 import 'package:fruits_app/core/theming/text_styles.dart';
+import 'package:fruits_app/features/auth/presentaion/signin_view.dart';
+import 'package:fruits_app/features/home/presentation/cubits/cart_cubit/cart_cubit.dart';
 
 import '../../generated/assets.dart';
 import 'custom_network_image.dart';
@@ -77,7 +80,9 @@ class FruitItem extends StatelessWidget {
                     textAlign: TextAlign.right,
                   ),
                   trailing: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      context.read<CartCubit>().addProduct(productEntity);
+                    },
                     child: const CircleAvatar(
                       backgroundColor: AppColors.primaryColor,
                       child: Icon(

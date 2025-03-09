@@ -14,4 +14,5 @@ abstract class AppColors {
   static const Color textFieldBackground = Color(0xFFF9FAFA);
   static const Color red = Color(0xFFE74C3C);
   static const Color offWhite = Color(0xFFF3F5F7);
+  static const Color lighterGreen = Color(0xFFEBF9F1);
 }

@@ -31,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "by_creating_an_account_you_agree_to":
             MessageLookupByLibrary.simpleMessage(
                 "by_creating_an_account_you_agree_to"),
+        "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "cart_is_empty":
+            MessageLookupByLibrary.simpleMessage("No Products in your cart"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "discount": MessageLookupByLibrary.simpleMessage("Discounts"),
         "dont_have_account":
@@ -68,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "our_terms_and_conditions":
             MessageLookupByLibrary.simpleMessage("Our Terms and Conditions"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "please_accept_the_terms_and_conditions":
             MessageLookupByLibrary.simpleMessage(
                 "Please accept the Terms and Conditions."),
@@ -94,7 +98,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter your name"),
         "please_enter_you_password":
             MessageLookupByLibrary.simpleMessage("Please enter your password"),
+        "pound": MessageLookupByLibrary.simpleMessage("Pound"),
+        "product_successfully_added":
+            MessageLookupByLibrary.simpleMessage("Product successfully added"),
+        "product_successfully_removed": MessageLookupByLibrary.simpleMessage(
+            "Product successfully removed"),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
+        "products_in_your_cart":
+            MessageLookupByLibrary.simpleMessage("Products in your cart"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "register_error":
@@ -122,7 +133,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "wrong_password_or_email_provided_for_that_user":
             MessageLookupByLibrary.simpleMessage(
                 "Wrong Password or Email provided for that user"),
-        "you_already_have_an_account":
-            MessageLookupByLibrary.simpleMessage("You already have an account?")
+        "you_already_have_an_account": MessageLookupByLibrary.simpleMessage(
+            "You already have an account?"),
+        "you_have": MessageLookupByLibrary.simpleMessage("You have")
       };
 }
